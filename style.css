@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: gilroy, sans-serif;
 }
 
 html,
@@ -12,36 +11,77 @@ body {
     background: #000;
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.1s ease-out;
+@font-face {
+    font-family: Bumbon;
+    src: url(Assets/Fonts/LDBumbon-Regular.woff2);
 }
 
-p {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 500;
+nav, 
+footer{
+    width: 100%;
+    position: fixed;
+    padding: 2em;
+    display:flex;
+    align-items: center;
 }
 
 nav{
-    width: 100%;
-    position: fixed;
     top: 0;
-    padding: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
+h1 {
+    font-family: Bumbon;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: #f3fcff 2px 0 14px;
+}
+
+footer{
+    bottom: 0;
+    justify-content: flex-end;
+    padding: 0.5em;
+    z-index: 10;
+}
+
+
+i{
+    color: #fff;
+    font-size: 40px;
+}
+
+footer p{
+    font-family: Bumbon;
+    font-weight: 100;
+    font-size: 10px;
+    color: #f0fff6;
+    padding-right: 2px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer:hover{
+    cursor: pointer;
+}
+
+footer:hover p{
+    cursor: pointer;
+    opacity: 1;
+}
+
+
 .slider{
+    margin: 1em;
     width: 500%;
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 45%;
+    left: 37%;
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -51,4 +91,11 @@ nav{
     height: 500px;
     transition: transform 0.1s ease-out;
     overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.1s ease-out;
 }
